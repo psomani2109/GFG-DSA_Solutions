@@ -3,7 +3,7 @@ class Solution {
     void rotateArr(vector<int>& arr, int d) {
         // code here
         d=d % arr.size();
-        int count=0;
+        /*int count=0;
         for(int i=0; i<arr.size(); i++)
         {
             if(count==d)
@@ -22,6 +22,10 @@ class Solution {
         {
             arr.pop_back();
             temp--;
-        }
+        }*/
+        
+        reverse(arr.begin(), arr.begin()+d);
+        reverse(arr.begin()+d, arr.end());
+        reverse(arr.begin(), arr.end());
     }
 };
